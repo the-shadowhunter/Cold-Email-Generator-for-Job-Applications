@@ -13,6 +13,9 @@ from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.exceptions import OutputParserException
 import streamlit as st 
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 load_dotenv()
 GROQ_API_KEY = st.secrets['GROQ_API_KEY']
