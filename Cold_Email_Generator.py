@@ -174,7 +174,6 @@ class Chain:
     
 import streamlit as st
 from io import BytesIO
-from main import parse_pdf, clean_text, extract_links, store_resume, parse_job_posting, Chain, get_stored_resumes
 
 chain_instance = Chain()
 
